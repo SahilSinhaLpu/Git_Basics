@@ -1,0 +1,87 @@
+git init - to start a folder as a git repository.
+git conifg user.name "Sahil Sinha" - to change name
+git config user.email "sahil.email@l.com" -to change email id
+git config list - shows the details of current config.
+git add . - tells git to add all the changes we made. the . represents the folder.
+git commit -m "Messages." - to commit changes.
+
+git log - shows the log  of commitments we have made and the message with the same.
+git log --author="author name" - to see commits by specific author.
+
+git add newfilename.format - to add the new file to the repo. the repos works as working area >> staging area >> commiting. can be used to update edited file or add a new one to stage and then commit. For doing it for multiple file use . .
+
+git diff - this shows the difference. the red show the pervious  and green shows the new changes you made. when changes are made to multiple files the diff will shown up one by one.
+when we go for diff comparision is done bw working space and repos. So in case the file is added to the staging area, no diff will popup. so to see diff bw changes in bw working space and staging area
+git diff --staged
+
+--- 
+this part refers to check in github thing.
+----
+For renaming the file. 
+
+git rm "filename.fileformat" - deletes the file from the home dir.  as well as from the repo.
+git add newfilename.format  - add the file to the repo.
+git rm  previousnameofthesamefile.format  - remove the previous file from the repo
+git status -- shows you have renamed a file.
+git commit -m "rename" - for renaming things.
+
+alternative method:
+
+git mv filename.txt newfilename.txt
+git status
+git commit -m "renaming"
+
+
+in case we want to move file to new folder:
+
+git mv filename.format Newfolder/Newfilename.format
+
+-----
+
+the method to add files directly to repo without adding them to the stage.
+
+git commit -am "Message"  - directly add to repo with msg. It commits all changes. Onlu helpful when editing files. -a - skips the staging area.
+
+---
+Undo the changes we made in the folder, means retrieving from the repo.
+
+git checkout -- filenametoretrive.format
+= checkout - takes something from the repo and make it into the working spaces.
+-- is used for branch.
+ 
+----
+to get back file from the staging area
+
+git reset HEAD filename.format 
+
+---
+getting the old versions from the repo. the retrieval from the repo.
+the version retaining.
+
+git checkout 3cd166...  -- filename.format
+
+---
+
+git remote add urlofgithubrepo   -   Connect git repo to github repo
+
+git push -u gitreponame master	- 	Pushing a file into github using the git
+---
+now we will work with the desktop of github.
+
+
+---=---
+
+
+in order to ignore file or folder from being uploaded to the repo.
+we can use the following file
+
+.gitignore
+
+in this format file we include the folders which we want to ignore
+
+and it goes like
+
+.foldername
+
+---
+this statement right here is to check if the github web works or not.
